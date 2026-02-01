@@ -1,3 +1,9 @@
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Azure](https://img.shields.io/badge/Azure-Cloud-blue)
+![Databricks](https://img.shields.io/badge/Databricks-PySpark-red)
+![Delta Lake](https://img.shields.io/badge/Delta-Lake-green)
+![Power BI](https://img.shields.io/badge/PowerBI-Visualization-yellow)
+
 # Amazon Prime Movies & TV Shows  
 ## End-to-End Azure Data Engineering Pipeline
 
@@ -5,6 +11,8 @@
 This project demonstrates an **end-to-end, production-style data engineering pipeline** built on **Microsoft Azure**, using the Amazon Prime Movies and TV Shows dataset.
 
 The objective is to ingest raw data, process and transform it using a **medallion architecture**, store it efficiently in a data lake, and make it analytics-ready for downstream reporting and visualization.
+<img width="1303" height="685" alt="Screenshot 2026-01-31 235736" src="https://github.com/user-attachments/assets/0dfcef88-7cb8-406c-b42f-ba13bd3a8d71" />
+
 
 The dataset contains metadata such as:
 - Title name  
@@ -58,6 +66,7 @@ The pipeline follows the **Medallion Architecture** pattern:
 - Business-ready aggregations  
 - Output written to **ADLS Gold container** in **Delta format**
 - Optimized for analytics and BI consumption
+<img width="1919" height="935" alt="Screenshot 2026-01-31 235121" src="https://github.com/user-attachments/assets/64bc6f4d-a297-4c57-8490-b2f183c9e609" />
 
 ---
 
@@ -78,6 +87,8 @@ The pipeline follows the **Medallion Architecture** pattern:
 4. **Analytics**
  - Azure Synapse queries Gold layer data directly from ADLS
  - Uses serverless SQL pools (no dedicated warehouse required)
+   <img width="1608" height="981" alt="Screenshot 2026-01-31 235055" src="https://github.com/user-attachments/assets/599f2ffe-931b-4041-b877-4586b489369f" />
+
 
 ---
 
@@ -89,8 +100,9 @@ While setting up Azure Databricks, a key challenge encountered was **VM unavaila
 - Selected a **4-core, 16 GB RAM VM**
 - Configured a **single-node Databricks cluster**
 - Successfully executed PySpark workloads
-
+<img width="1918" height="982" alt="Screenshot 2026-01-31 235013" src="https://github.com/user-attachments/assets/a2acdd1d-4f72-44d8-ae3f-76ba065e347f" />
 This reflects a real-world production constraint and its resolution.
+
 
 ---
 
@@ -100,6 +112,7 @@ This reflects a real-world production constraint and its resolution.
 - Follows Azure best practices for secure data access
 
 ---
+
 
 ## 📊 Analytics with Azure Synapse
 - Gold layer Delta tables queried using **Azure Synapse Analytics**
@@ -113,5 +126,7 @@ This reflects a real-world production constraint and its resolution.
 - Implement incremental data loading
 - Add data quality checks and monitoring
 - Schedule automated pipeline runs using ADF triggers
+<img width="1165" height="687" alt="image" src="https://github.com/user-attachments/assets/05555878-cd25-4d98-944d-def60b5572fa" />
+
 
 
