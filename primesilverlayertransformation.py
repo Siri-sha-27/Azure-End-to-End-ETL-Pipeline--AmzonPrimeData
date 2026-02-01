@@ -7,11 +7,12 @@ Original file is located at
     https://colab.research.google.com/drive/1SrGU9og389Io_fO71RiGb_OpzVgdyoiO
 """
 
-spark.conf.set("fs.azure.account.auth.type.adlsprimework.dfs.core.windows.net", "OAuth")
-spark.conf.set("fs.azure.account.oauth.provider.type.adlsprimework.dfs.core.windows.net", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
-spark.conf.set("fs.azure.account.oauth2.client.id.adlsprimework.dfs.core.windows.net", "7cc6867a-2661-46e8-b4de-eaf76462a2bb")
-spark.conf.set("fs.azure.account.oauth2.client.secret.adlsprimework.dfs.core.windows.net", "a1m8Q~yfElSxhXuQxnDQU73LZB4o~gaZwTSbTbH-")
-spark.conf.set("fs.azure.account.oauth2.client.endpoint.adlsprimework.dfs.core.windows.net", "https://login.microsoftonline.com/f045ba8f-f191-46d0-9b94-ddef417b68ad/oauth2/v2.0/token")
+
+spark.conf.set("fs.azure.account.auth.type.<storage-account>.dfs.core.windows.net", "OAuth")
+spark.conf.set("fs.azure.account.oauth.provider.type.<storage-account>.dfs.core.windows.net", "org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider")
+spark.conf.set("fs.azure.account.oauth2.client.id.<storage-account>.dfs.core.windows.net", "<application-id>")
+spark.conf.set("fs.azure.account.oauth2.client.secret.<storage-account>.dfs.core.windows.net", service_credential)
+spark.conf.set("fs.azure.account.oauth2.client.endpoint.<storage-account>.dfs.core.windows.net", "https://login.microsoftonline.com/<directory-id>/oauth2/token")
 
 dbutils.fs.ls('abfss://bronze@adlsprimework.dfs.core.windows.net/')
 
